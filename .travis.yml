@@ -12,3 +12,4 @@ deploy:
   on:
     branch: master
   gem: vagrant-json-plugin
+  gemspec: vagrant-json.gemspec
