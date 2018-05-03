@@ -6,7 +6,7 @@ module VagrantPlugins
   module VagrantJson
 
     def self.source_root
-      @source_root ||= Pathname.new(File.expand_path'../../', __FILE__)
+      @source_root ||= Pathname.new(File.expand_path '../../', __FILE__)
     end
 
     def self.apply_settings(vm, yml)
@@ -28,7 +28,7 @@ module VagrantPlugins
 
       vms = []
 
-      files = Dir.glob("*.{json,yaml,yml}").map { |f| JSON.parse(YAML.load_file(f).to_json, symbolize_names: true) }
+      files = Dir.glob("*.{json,yaml,yml}").map {|f| JSON.parse(YAML.load_file(f).to_json, symbolize_names: true)}
 
       files.each do |file|
         if file[:boxes]
@@ -38,16 +38,12 @@ module VagrantPlugins
         end
       end
 
-     vms.each do |vm|
-       config.vm.define "#{vm[:hostname]}" do |vm_config|
-         apply_settings(vm_config.vm, vm)
-       end
-     end
+      vms.each do |vm|
+        config.vm.define "#{vm[:hostname]}" do |vm_config|
+          apply_settings(vm_config.vm, vm)
+        end
+      end
 
-    end
-
-    def self.convert(file)
-      JSON.parse(YAML.load_file(file).to_json, symbolize_names: true)
     end
 
     I18n.load_path << File.expand_path('locales/en.yml', source_root)

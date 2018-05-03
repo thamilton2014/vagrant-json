@@ -8,9 +8,9 @@ module VagrantPlugins
       name 'VagrantJson'
       description "The `json` command gives you a starting point for json configurations"
 
-      config(:yml) do
-        require_relative "config"
-        Config
+      config(:json) do
+        require_relative "config/json"
+        Config::Json
       end
 
       command("json") do

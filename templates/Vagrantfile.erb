@@ -1,0 +1,15 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+# Vagrantfile API/syntax version. Don't touch unless you know what you're doing!
+VAGRANTFILE_API_VERSION = "2"
+
+  Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
+
+  # Un-comment this and specify the directory in which to look for YAML VM config files.
+  #config.yaml.conf_dirs = ".vagrant_config"
+
+  # Load YAML VM configs.
+  VagrantPlugins::VagrantJson::up!(config)
+
+end # => end Vagrantfile
