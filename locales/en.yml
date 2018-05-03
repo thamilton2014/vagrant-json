@@ -1,0 +1,11 @@
+en:
+  vagrant:
+    plugins:
+      yml:
+        commands:
+          init:
+            success:
+              A default `Vagrantfile` and `Yaml` VM config file has been placed in this directory. You are now ready to `vagrant up` your first
+              virtual environment! Please read the comments in the default Yaml VM config file to see how it works.
+
+
