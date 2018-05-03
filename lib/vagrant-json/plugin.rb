@@ -2,7 +2,7 @@
 require "vagrant"
 
 module VagrantPlugins
-  module VagrantYml
+  module VagrantJson
     class Plugin < Vagrant.plugin('2')
 
       name 'VagrantJson'
