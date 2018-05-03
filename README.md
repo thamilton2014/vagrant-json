@@ -6,23 +6,17 @@ TODO: Delete this and the text above, and describe your gem
 
 ## Installation
 
-Add this line to your application's Gemfile:
+To add this plugin:
 
 ```ruby
-gem 'vagrant-json'
+vagrant plugin install vagrant-json-plugin
 ```
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install vagrant-json
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+vagrant json init
+```
 
 ## Development
 
